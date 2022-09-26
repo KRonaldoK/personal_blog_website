@@ -1,0 +1,126 @@
+.blog-post-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 50px 1fr min-content min-content 50px;
+    grid-template-areas:
+        "hd hd"
+        "sd sd"
+        "main main"
+        "bio bio"
+        "ft ft";
+}
+/* blog content */
+article {
+    grid-area: main;
+}
+
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 1rem;
+    box-shadow: 2px 2px 6px grey;
+    margin: 1rem;
+}
+
+.blog-post-img {
+  max-width: 50%;
+  max-height: 50%;
+  object-fit: cover;
+}
+
+.blog-intro {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+blockquote {
+    border-left: 2px solid #A40000;
+    padding: 0.5rem;
+    font-size: 1.1em;
+}
+/* bio section */
+#bio {
+  grid-area: bio;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.bio-image-container {
+    display: flex;
+    justify-content: center;
+    margin: auto 0;
+    max-width: 100%;
+}
+
+.bio-description {
+    max-width: 100%;
+}
+
+#bio-icon {
+    width: 50%;
+    border-radius: 50%;
+    border: 6px solid #A40000;
+}
+
+.sidebar-blog-post {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+/* responsive layout */
+@media(min-width: 900px) {
+
+    .blog-post-container {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 100px 1fr 1fr 1fr 50px;
+        grid-template-areas:
+            "hd hd hd hd hd hd hd hd"
+            "main main main main main main sd sd"
+            "main main main main main main bio bio"
+            "ft ft ft ft ft ft ft ft";
+    }
+
+    /* content */
+    .blog-post {
+        margin: 2rem;
+        padding: 2rem;
+    }
+
+    blockquote {
+        padding: 1rem;
+        font-size: 1.2em;
+    }
+
+    /* bio section */
+    #bio {
+      grid-area: sd;
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      padding: 1rem;
+      justify-content: space-between;
+      margin-top: 100px;
+    }
+
+    #bio-icon {
+        max-width: 50%;
+    }
+
+    .bio-image-container {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 100%;
+
+    }
+
+    .bio-description {
+        max-width: 100%;
+    }
+}
