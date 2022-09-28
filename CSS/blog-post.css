@@ -39,7 +39,10 @@ blockquote {
     border-left: 2px solid #A40000;
     padding: 0.5rem;
     font-size: 1.1em;
+    text-decoration:underline;
+    font-style: italic;
 }
+
 /* bio section */
 #bio {
   grid-area: bio;
@@ -95,6 +98,8 @@ blockquote {
     blockquote {
         padding: 1rem;
         font-size: 1.2em;
+        text-decoration:underline;
+        font-style: italic;
     }
 
     /* bio section */
