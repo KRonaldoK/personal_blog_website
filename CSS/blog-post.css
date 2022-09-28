@@ -25,9 +25,7 @@ article {
 }
 
 .blog-post-img {
-  max-width: 50%;
-  max-height: 50%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .blog-intro {
@@ -94,6 +92,12 @@ blockquote {
         margin: 2rem;
         padding: 2rem;
     }
+
+  .blog-post-img {
+    max-width: 50%;
+    max-height: 50%;
+    object-fit: cover;
+  }
 
     blockquote {
         padding: 1rem;
