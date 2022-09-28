@@ -41,6 +41,36 @@ blockquote {
     font-style: italic;
 }
 
+.sidebar-blog-post {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+/* social */
+
+#share {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.social-icon {
+  height: 100%;
+  width: auto;
+  padding: 0.5rem;
+  filter: opacity(0.6);
+  transition: filter 0.5s;
+}
+
+.social-link {
+  margin: 1rem;
+}
+
+.social-icon:hover {
+  filter: opacity(1);
+}
+
 /* bio section */
 #bio {
   grid-area: bio;
@@ -66,12 +96,6 @@ blockquote {
     width: 50%;
     border-radius: 50%;
     border: 6px solid #A40000;
-}
-
-.sidebar-blog-post {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
 }
 
 /* responsive layout */
